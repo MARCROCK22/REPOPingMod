@@ -1,7 +1,7 @@
 {
     "name": "REPOPingSystem",
     "version_number": "0.2.1",
-    "website_url": "",
+    "website_url": "https://github.com/MARCROCK22/REPOPingMod",
     "description": "Adds a Fortnite/PEAK-style ping system with radial wheel, 4 ping types, audio, and multiplayer sync",
     "dependencies": [
         "BepInEx-BepInExPack-5.4.2305",
