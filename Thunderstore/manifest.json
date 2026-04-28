@@ -1,0 +1,10 @@
+{
+    "name": "REPOPingSystem",
+    "version_number": "0.2.1",
+    "website_url": "",
+    "description": "Adds a Fortnite/PEAK-style ping system with radial wheel, 4 ping types, audio, and multiplayer sync",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2305",
+        "Zehs-REPOLib-3.0.4"
+    ]
+}
