@@ -45,6 +45,11 @@ Install via Gale, r2modman, or Thunderstore Mod Manager. Manual: copy `REPOPingM
 
 ## Changelog
 
+### 0.3.0
+- Improved item/enemy/cart detection: now uses `GetComponentInParent` (same as the game) instead of limited depth search
+- Fixes items not being detected as Loot on modded valuables with deep prefab hierarchies
+- Verified against 801 objects: ~697 valuables, ~75 items, 29 enemy types, 2 carts, 0 false positives
+
 ### 0.2.1
 - Async preview rendering: preview capture spread across 5 frames (no more freezing)
 - Uses RenderTexture directly (no ReadPixels GPU stall)

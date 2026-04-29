@@ -166,48 +166,22 @@ namespace REPOPingMod
             return PingType.GoHere;
         }
 
-        /// <summary>
-        /// Check if the hit object is an enemy by looking for EnemyHealth in parents (max 5 levels).
-        /// </summary>
         private static bool IsEnemy(GameObject obj)
         {
-            Transform t = obj.transform;
-            for (int i = 0; i < 8 && t != null; i++)
-            {
-                if (t.GetComponent("EnemyHealth") != null ||
-                    t.GetComponent("EnemyParent") != null ||
-                    t.GetComponent("EnemyRigidbody") != null)
-                    return true;
-                t = t.parent;
-            }
-            return false;
+            return obj.GetComponentInParent<EnemyHealth>() != null
+                || obj.GetComponentInParent<EnemyParent>() != null
+                || obj.GetComponentInParent<EnemyRigidbody>() != null;
         }
 
-        /// <summary>
-        /// Check if the hit object is a valuable/item by looking for ValuableObject or ItemAttributes in parents (max 3 levels).
-        /// </summary>
         private static bool IsItem(GameObject obj)
         {
-            Transform t = obj.transform;
-            for (int i = 0; i < 3 && t != null; i++)
-            {
-                if (t.GetComponent("ValuableObject") != null || t.GetComponent("ItemAttributes") != null)
-                    return true;
-                t = t.parent;
-            }
-            return false;
+            return obj.GetComponentInParent<ValuableObject>() != null
+                || obj.GetComponentInParent<ItemAttributes>() != null;
         }
 
         private static bool IsCart(GameObject obj)
         {
-            Transform t = obj.transform;
-            for (int i = 0; i < 3 && t != null; i++)
-            {
-                if (t.GetComponent("PhysGrabCart") != null)
-                    return true;
-                t = t.parent;
-            }
-            return false;
+            return obj.GetComponentInParent<PhysGrabCart>() != null;
         }
 
         /// <summary>

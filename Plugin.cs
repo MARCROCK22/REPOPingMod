@@ -15,7 +15,7 @@ namespace REPOPingMod
     {
         public const string PluginGUID = "com.repomods.pingsystem";
         public const string PluginName = "REPO Ping System";
-        public const string PluginVersion = "0.2.1";
+        public const string PluginVersion = "0.3.0";
 
         internal static new ManualLogSource Logger;
         internal static PingConfig PingConfig;
